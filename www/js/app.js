@@ -81,7 +81,6 @@ if(localStorage.loginstatus != "true"){
 	$$('.view-main, .panel').show();
 	loadContent();
 	(function loopingFunction() {
-    loadlist(localStorage.appUserID);
     setTimeout(loopingFunction, 20000);
 })();	
 }
@@ -97,6 +96,35 @@ $$('.logout').on('click', function () {
 
 // Login Screen
 $$('#my-login-screen .login-button').on('click', function () {
+  var username = $$('#my-login-screen [name="username"]').val();
+  var password = $$('#my-login-screen [name="password"]').val();
+
+  if(username != '' && password != ''){
+ app.preloader.show();
+  
+      setTimeout(function () {
+$$('.view-main, .panel').show();
+	localStorage.loginstatus = "true";
+    localStorage.appFullName = "Mr Ajijola";
+    localStorage.appWallet = "8000";
+    localStorage.appUserName = username;
+    localStorage.appUserEmail = "me@mail.com";
+    localStorage.appUserPhone = "08011111111";
+    localStorage.appUserID = "1";
+	app.loginScreen.close('#my-login-screen');	
+	loadContent();
+	$$('.loginStat').html('');
+	app.preloader.hide();      
+      }, 1000);
+
+	  
+
+}
+});
+
+
+// Login Screen 
+/*$$('#my-login-screen .login-button').on('click', function () {
   var username = $$('#my-login-screen [name="username"]').val();
   var password = $$('#my-login-screen [name="password"]').val();
   var reqst = 'login';
@@ -140,6 +168,6 @@ app.request.post('https://dialacab.ng/driverapp/', {req: reqst, user: username, 
 }, {dataType: 'json'});
 
 }
-});
+});*/
 
 
