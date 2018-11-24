@@ -1,0 +1,61 @@
+html, body {
+    color: rgb(60, 60, 60);
+    font-size: 16px;
+    text-align: left;
+    font-family: helvetica, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.horizontal-controls {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.modal-body img {
+    width: 90px;
+}
+
+#status-indicator {
+    font-size: 150%;
+}
+
+#controls .well {
+    margin:0.5em;
+}
+
+#controls .row {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+#controls .col-12, #controls .col-6, #controls .col-4 {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+#controls p {
+    margin-top: 9px;
+}
+
+#select-piece-black .modal-dialog, #select-piece-white .modal-dialog {
+    width: 250px;
+}
+
+#select-piece-black .modal-content, #select-piece-white .modal-content {
+    background-color: rgba(256, 256, 256, 0.5);
+}
+
+#select-piece-black img, #select-piece-white img {
+    background-color: rgba(256, 256, 256, 0.5);
+}
+
+#board .selected {
+    background-color: rgb(120, 195, 238);
+}
+
+.footer {
+    padding: 1em;
+}
+
