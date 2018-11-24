@@ -1,0 +1,63 @@
+/* Your app styles here */
+
+/* Left Panel right border when it is visible by breakpoint */
+.panel-left.panel-visible-by-breakpoint:before {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background: rgba(0,0,0,0.1);
+  content: '';
+  z-index: 6000;
+}
+
+/* Hide navbar link which opens left panel when it is visible by breakpoint */
+.panel-left.panel-visible-by-breakpoint ~ .view .navbar .panel-open[data-panel="left"] {
+  display: none;
+}
+
+/*
+  Extra borders for main view and left panel for iOS theme when it behaves as panel (before breakpoint size)
+*/
+.ios .panel-left:not(.panel-visible-by-breakpoint).panel-active ~ .view-main:before,
+.ios .panel-left:not(.panel-visible-by-breakpoint).panel-closing ~ .view-main:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background: rgba(0,0,0,0.1);
+  content: '';
+  z-index: 6000;
+}
+.red{color:red}
+.green{color:green}
+
+.md .login-screen-title {
+
+    font-size: 24px;
+
+}
+.md .toolbar {
+    height: auto;
+	padding:20px;
+	padding-top:0px
+}
+.home.block-title{margin-top:140px}
+.toolbar-inner {
+}
+
+.text-center{text-align:center}
+.text-right{text-align:right}
+.text-left{text-align:left}
+
+h3.appFullName{margin-bottom:5px;}
+span.appWallet{font-weight:200; font-size:24px}
+
+
+
+
+
+
+
